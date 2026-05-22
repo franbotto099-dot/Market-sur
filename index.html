@@ -404,6 +404,14 @@
       align-items: center;
       justify-content: center;
       font-size: 38px;
+      overflow: hidden;
+    }
+
+    .offer-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .offer-body { padding: 10px 10px 12px; }
@@ -966,68 +974,7 @@
   <div class="divider"></div>
   <p class="section-sub">Precios actualizados. Solo mientras dure el stock. No te quedes sin el tuyo.</p>
 
-  <div class="offers-scroll">
-    <div class="offer-card">
-      <div class="offer-img-wrap">🥛</div>
-      <div class="offer-body">
-        <span class="offer-badge">-25%</span>
-        <p class="offer-name">Leche La Serenísima Entera 1L</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Stock limitado</p>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img-wrap">🍗</div>
-      <div class="offer-body">
-        <span class="offer-badge yellow">2×1</span>
-        <p class="offer-name">Hamburguesas Paty x4 unidades</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Últimas unidades</p>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img-wrap">🧴</div>
-      <div class="offer-body">
-        <span class="offer-badge">-30%</span>
-        <p class="offer-name">Lavandina 1 litro</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Stock limitado</p>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img-wrap">🥤</div>
-      <div class="offer-body">
-        <span class="offer-badge yellow">COMBO</span>
-        <p class="offer-name">Citric 1.5L × 3 unidades</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Combo especial</p>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img-wrap">🧈</div>
-      <div class="offer-body">
-        <span class="offer-badge">-20%</span>
-        <p class="offer-name">Manteca Dánica 200g</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Stock limitado</p>
-      </div>
-    </div>
-    <div class="offer-card">
-      <div class="offer-img-wrap">🍟</div>
-      <div class="offer-body">
-        <span class="offer-badge">PROMO</span>
-        <p class="offer-name">Sadia pollo / empanados</p>
-        <p class="offer-old">Precio regular</p>
-        <p class="offer-price">OFERTA</p>
-        <p class="offer-stock">⚠ Stock limitado</p>
-      </div>
-    </div>
-  </div>
+  <div class="offers-scroll" id="offersGrid"></div>
 
   <a href="https://wa.me/5492964622955?text=Hola%20Market%20Sur%20%F0%9F%91%8B%20Quiero%20ver%20todas%20las%20ofertas%20disponibles%20de%20esta%20semana"
      class="btn-center" target="_blank" rel="noopener noreferrer">
@@ -1042,17 +989,7 @@
     <h2 class="section-title">Folleto Digital</h2>
     <div class="divider"></div>
     <p class="section-sub">Revisá las ofertas antes de venir. Anotá tu lista y llegá directo a lo que buscás.</p>
-    <div class="folleto-card">
-      <div class="folleto-icon" aria-hidden="true">📋</div>
-      <div class="folleto-info">
-        <p class="folleto-week">📅 Semana del 11 al 17 de mayo de 2026</p>
-        <h3 class="folleto-title">Ofertas semanales en Market Sur<br>Río Grande, Tierra del Fuego</h3>
-        <div class="folleto-btns">
-          <a href="#" class="btn-folleto primary">📄 Ver folleto digital</a>
-          <a href="#" class="btn-folleto secondary">⬇ Descargar PDF</a>
-        </div>
-      </div>
-    </div>
+    <div id="folletoCard"></div>
   </div>
 </div>
 
@@ -1063,59 +1000,7 @@
   <div class="divider"></div>
   <p class="section-sub">Mostrá el código en caja y listo. Sin app, sin registro, sin complicaciones.</p>
 
-  <div class="cupones-grid">
-    <div class="cupon-card">
-      <div class="cupon-emoji" aria-hidden="true">🎟</div>
-      <div class="cupon-info">
-        <div class="cupon-pct">10% OFF</div>
-        <div class="cupon-desc">En tu próxima compra en Market Sur</div>
-        <div class="cupon-row">
-          <span class="cupon-code">MSUR10</span>
-          <span class="cupon-valid">Válido: 17/05/26</span>
-        </div>
-      </div>
-      <button class="btn-cupon" data-code="MSUR10" aria-label="Copiar código MSUR10">MOSTRAR<br>AL CAJERO</button>
-    </div>
-
-    <div class="cupon-card">
-      <div class="cupon-emoji" aria-hidden="true">🎟</div>
-      <div class="cupon-info">
-        <div class="cupon-pct">2×1</div>
-        <div class="cupon-desc">En bebidas seleccionadas</div>
-        <div class="cupon-row">
-          <span class="cupon-code">COMBO2X1</span>
-          <span class="cupon-valid">Válido: 17/05/26</span>
-        </div>
-      </div>
-      <button class="btn-cupon" data-code="COMBO2X1" aria-label="Copiar código COMBO2X1">MOSTRAR<br>AL CAJERO</button>
-    </div>
-
-    <div class="cupon-card">
-      <div class="cupon-emoji" aria-hidden="true">🎟</div>
-      <div class="cupon-info">
-        <div class="cupon-pct">15% OFF</div>
-        <div class="cupon-desc">En productos de limpieza</div>
-        <div class="cupon-row">
-          <span class="cupon-code">LIMPIEZA15</span>
-          <span class="cupon-valid">Válido: 17/05/26</span>
-        </div>
-      </div>
-      <button class="btn-cupon" data-code="LIMPIEZA15" aria-label="Copiar código LIMPIEZA15">MOSTRAR<br>AL CAJERO</button>
-    </div>
-
-    <div class="cupon-card">
-      <div class="cupon-emoji" aria-hidden="true">🎟</div>
-      <div class="cupon-info">
-        <div class="cupon-pct">ENVÍO</div>
-        <div class="cupon-desc">Pedido por WhatsApp con entrega</div>
-        <div class="cupon-row">
-          <span class="cupon-code">DELIVERY</span>
-          <span class="cupon-valid">Consultá condiciones</span>
-        </div>
-      </div>
-      <button class="btn-cupon" data-code="DELIVERY" aria-label="Copiar código DELIVERY">MOSTRAR<br>AL CAJERO</button>
-    </div>
-  </div>
+  <div class="cupones-grid" id="cuponesGrid"></div>
 
   <p class="cupon-note">* Un cupón por compra · No acumulable · Válido presentando este sitio en caja</p>
 </section>
@@ -1126,14 +1011,7 @@
     <div class="section-label">Encontrá todo lo que necesitás</div>
     <h2 class="section-title">Nuestras categorías</h2>
     <div class="divider" style="background: linear-gradient(90deg, var(--red), rgba(255,255,255,0.35));"></div>
-    <div class="cat-grid">
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🥛</span><span class="cat-name">Lácteos</span></div>
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🍗</span><span class="cat-name">Carnes</span></div>
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🧴</span><span class="cat-name">Limpieza</span></div>
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🥤</span><span class="cat-name">Bebidas</span></div>
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🥫</span><span class="cat-name">Almacén</span></div>
-      <div class="cat-card" tabindex="0"><span class="cat-emoji" aria-hidden="true">🍞</span><span class="cat-name">Panadería</span></div>
-    </div>
+    <div class="cat-grid" id="catGrid"></div>
   </div>
 </div>
 
@@ -1303,26 +1181,206 @@
 
   resetTimer();
 
-  // ---- CUPONES ----
-  document.querySelectorAll('.btn-cupon').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var code = this.dataset.code;
-      var original = this.innerHTML;
-      var self = this;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).then(function() {
-          self.innerHTML = '✅ COPIADO!';
-          setTimeout(function() { self.innerHTML = original; }, 2200);
-        }).catch(function() {
-          self.innerHTML = '📋 ' + code;
-          setTimeout(function() { self.innerHTML = original; }, 3000);
-        });
-      } else {
-        self.innerHTML = '📋 ' + code;
-        setTimeout(function() { self.innerHTML = original; }, 3000);
+  // ---- GOOGLE SHEETS → OFERTAS ----
+  // Paso 1: Abrí tu Google Sheet
+  // Paso 2: Archivo > Compartir > Publicar en la web > Hoja1 > CSV > Publicar
+  // Paso 3: Copiá la URL y pegala abajo en SHEET_CSV_URL
+  //
+  // Columnas esperadas en la hoja (fila 1 = encabezados exactos):
+  //   nombre | emoji | precio_regular | precio_oferta | badge | badge_tipo | stock | activo | imagen
+  //
+  // badge_tipo: "rojo" o "amarillo"
+  // activo: "si" para mostrar, "no" para ocultar sin borrar
+  // imagen: URL directa de la foto del producto (opcional)
+  //   → Google Drive: subí la foto, clic derecho > Obtener enlace > Cualquiera con el enlace
+  //     luego cambiá la URL así: https://drive.google.com/uc?export=view&id=TU_ID_ACÁ
+  //   → También podés usar cualquier URL directa de imagen (.jpg, .png, .webp)
+  //
+  var SHEET_CSV_URL        = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS54XqnNWIXSoVnHY3pNgCsXoMAm-aFserBhhN7K_JNmKGwsc-Jr6JLHmVzy04pKD7avNGJtBGv6g7T/pub?gid=476422192&single=true&output=csv'; // Hoja "Productos"
+  var SHEET_CUPONES_URL    = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS54XqnNWIXSoVnHY3pNgCsXoMAm-aFserBhhN7K_JNmKGwsc-Jr6JLHmVzy04pKD7avNGJtBGv6g7T/pub?gid=1536510758&single=true&output=csv';
+  var SHEET_CATEGORIAS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS54XqnNWIXSoVnHY3pNgCsXoMAm-aFserBhhN7K_JNmKGwsc-Jr6JLHmVzy04pKD7avNGJtBGv6g7T/pub?gid=1598735652&single=true&output=csv';
+  var SHEET_FOLLETO_URL    = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS54XqnNWIXSoVnHY3pNgCsXoMAm-aFserBhhN7K_JNmKGwsc-Jr6JLHmVzy04pKD7avNGJtBGv6g7T/pub?gid=868112705&single=true&output=csv';
+
+  var OFERTAS_FALLBACK = [
+    { nombre: 'Leche La Serenísima Entera 1L',  emoji: '🥛', precio_regular: '$1.500', precio_oferta: '$1.125', badge: '-25%',  badge_tipo: 'rojo',     stock: 'Stock limitado',   activo: 'si', imagen: '' },
+    { nombre: 'Hamburguesas Paty x4 unidades',   emoji: '🍗', precio_regular: '$2.800', precio_oferta: '$2.800', badge: '2×1',   badge_tipo: 'amarillo', stock: 'Últimas unidades', activo: 'si', imagen: '' },
+    { nombre: 'Lavandina 1 litro',               emoji: '🧴', precio_regular: '$900',   precio_oferta: '$630',   badge: '-30%',  badge_tipo: 'rojo',     stock: 'Stock limitado',   activo: 'si', imagen: '' },
+    { nombre: 'Citric 1.5L × 3 unidades',        emoji: '🥤', precio_regular: '$3.600', precio_oferta: '$2.900', badge: 'COMBO', badge_tipo: 'amarillo', stock: 'Combo especial',   activo: 'si', imagen: '' },
+    { nombre: 'Manteca Dánica 200g',             emoji: '🧈', precio_regular: '$1.200', precio_oferta: '$960',   badge: '-20%',  badge_tipo: 'rojo',     stock: 'Stock limitado',   activo: 'si', imagen: '' },
+    { nombre: 'Sadia pollo / empanados',         emoji: '🍟', precio_regular: '$3.500', precio_oferta: '$2.800', badge: 'PROMO', badge_tipo: 'rojo',     stock: 'Stock limitado',   activo: 'si', imagen: '' }
+  ];
+
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',').map(function(h) { return h.trim().replace(/^"|"$/g, ''); });
+    return lines.slice(1).map(function(line) {
+      var vals = [];
+      var cur = '';
+      var inQ = false;
+      for (var i = 0; i < line.length; i++) {
+        var c = line[i];
+        if (c === '"') { inQ = !inQ; }
+        else if (c === ',' && !inQ) { vals.push(cur.trim()); cur = ''; }
+        else { cur += c; }
       }
+      vals.push(cur.trim());
+      var obj = {};
+      headers.forEach(function(h, i) { obj[h] = (vals[i] || '').replace(/^"|"$/g, ''); });
+      return obj;
     });
+  }
+
+  function renderOfertas(productos) {
+    var grid = document.getElementById('offersGrid');
+    var activos = productos.filter(function(p) { return (p.activo || '').toLowerCase() === 'si'; });
+    if (!activos.length) return;
+    grid.innerHTML = activos.map(function(p) {
+      var badgeClass = (p.badge_tipo || '').toLowerCase() === 'amarillo' ? 'offer-badge yellow' : 'offer-badge';
+      var imgContent = p.imagen
+        ? '<img src="' + p.imagen + '" alt="' + p.nombre + '" loading="lazy" onerror="this.outerHTML=\'' + (p.emoji || '🛒') + '\'">'
+        : (p.emoji || '🛒');
+      return '<div class="offer-card">' +
+        '<div class="offer-img-wrap">' + imgContent + '</div>' +
+        '<div class="offer-body">' +
+          (p.badge ? '<span class="' + badgeClass + '">' + p.badge + '</span>' : '') +
+          '<p class="offer-name">' + p.nombre + '</p>' +
+          (p.precio_regular ? '<p class="offer-old">' + p.precio_regular + '</p>' : '') +
+          (p.precio_oferta  ? '<p class="offer-price">' + p.precio_oferta + '</p>'  : '') +
+          (p.stock          ? '<p class="offer-stock">⚠ ' + p.stock + '</p>'        : '') +
+        '</div></div>';
+    }).join('');
+  }
+
+  renderOfertas(OFERTAS_FALLBACK);
+
+  if (SHEET_CSV_URL) {
+    fetch(SHEET_CSV_URL + '&t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.text(); })
+      .then(function(text) { renderOfertas(parseCsv(text)); })
+      .catch(function() { /* fallback ya visible */ });
+  }
+
+  // ---- FOLLETO ----
+  var FOLLETO_FALLBACK = [
+    { semana: 'Semana del 19 al 25 de mayo de 2026', titulo: 'Ofertas semanales en Market Sur — Río Grande, Tierra del Fuego', url_ver: '', url_descargar: '', activo: 'si' }
+  ];
+
+  function renderFolleto(filas) {
+    var card = document.getElementById('folletoCard');
+    var activos = filas.filter(function(f) { return (f.activo || '').toLowerCase() === 'si'; });
+    if (!activos.length) { card.innerHTML = ''; return; }
+    var f = activos[0];
+    var btnVer = f.url_ver
+      ? '<a href="' + f.url_ver + '" class="btn-folleto primary" target="_blank" rel="noopener noreferrer">📄 Ver folleto digital</a>'
+      : '<span class="btn-folleto primary" style="opacity:.5;cursor:default">📄 Próximamente</span>';
+    var btnDesc = f.url_descargar
+      ? '<a href="' + f.url_descargar + '" class="btn-folleto secondary" target="_blank" rel="noopener noreferrer">⬇ Descargar PDF</a>'
+      : '';
+    card.innerHTML = '<div class="folleto-card">' +
+      '<div class="folleto-icon" aria-hidden="true">📋</div>' +
+      '<div class="folleto-info">' +
+        '<p class="folleto-week">📅 ' + f.semana + '</p>' +
+        '<h3 class="folleto-title">' + f.titulo + '</h3>' +
+        '<div class="folleto-btns">' + btnVer + btnDesc + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  renderFolleto(FOLLETO_FALLBACK);
+
+  if (SHEET_FOLLETO_URL) {
+    fetch(SHEET_FOLLETO_URL + '&t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.text(); })
+      .then(function(text) { renderFolleto(parseCsv(text)); })
+      .catch(function() {});
+  }
+
+  // ---- CUPONES ----
+  var CUPONES_FALLBACK = [
+    { descuento: '10% OFF', descripcion: 'En tu próxima compra en Market Sur', codigo: 'MSUR10',      vencimiento: '17/05/26',           activo: 'si' },
+    { descuento: '2×1',     descripcion: 'En bebidas seleccionadas',           codigo: 'COMBO2X1',   vencimiento: '17/05/26',           activo: 'si' },
+    { descuento: '15% OFF', descripcion: 'En productos de limpieza',           codigo: 'LIMPIEZA15', vencimiento: '17/05/26',           activo: 'si' },
+    { descuento: 'ENVÍO',   descripcion: 'Pedido por WhatsApp con entrega',    codigo: 'DELIVERY',   vencimiento: 'Consultá condiciones', activo: 'si' }
+  ];
+
+  function renderCupones(cupones) {
+    var grid = document.getElementById('cuponesGrid');
+    var activos = cupones.filter(function(c) { return (c.activo || '').toLowerCase() === 'si'; });
+    if (!activos.length) return;
+    grid.innerHTML = activos.map(function(c) {
+      return '<div class="cupon-card">' +
+        '<div class="cupon-emoji" aria-hidden="true">🎟</div>' +
+        '<div class="cupon-info">' +
+          '<div class="cupon-pct">' + c.descuento + '</div>' +
+          '<div class="cupon-desc">' + c.descripcion + '</div>' +
+          '<div class="cupon-row">' +
+            '<span class="cupon-code">' + c.codigo + '</span>' +
+            '<span class="cupon-valid">Válido: ' + c.vencimiento + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<button class="btn-cupon" data-code="' + c.codigo + '" aria-label="Copiar código ' + c.codigo + '">MOSTRAR<br>AL CAJERO</button>' +
+      '</div>';
+    }).join('');
+  }
+
+  renderCupones(CUPONES_FALLBACK);
+
+  if (SHEET_CUPONES_URL) {
+    fetch(SHEET_CUPONES_URL + '&t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.text(); })
+      .then(function(text) { renderCupones(parseCsv(text)); })
+      .catch(function() {});
+  }
+
+  document.getElementById('cuponesGrid').addEventListener('click', function(e) {
+    var btn = e.target.closest('.btn-cupon');
+    if (!btn) return;
+    var code = btn.dataset.code;
+    var original = btn.innerHTML;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(function() {
+        btn.innerHTML = '✅ COPIADO!';
+        setTimeout(function() { btn.innerHTML = original; }, 2200);
+      }).catch(function() {
+        btn.innerHTML = '📋 ' + code;
+        setTimeout(function() { btn.innerHTML = original; }, 3000);
+      });
+    } else {
+      btn.innerHTML = '📋 ' + code;
+      setTimeout(function() { btn.innerHTML = original; }, 3000);
+    }
   });
+
+  // ---- CATEGORÍAS ----
+  var CATEGORIAS_FALLBACK = [
+    { nombre: 'Lácteos',   emoji: '🥛', activo: 'si' },
+    { nombre: 'Carnes',    emoji: '🍗', activo: 'si' },
+    { nombre: 'Limpieza',  emoji: '🧴', activo: 'si' },
+    { nombre: 'Bebidas',   emoji: '🥤', activo: 'si' },
+    { nombre: 'Almacén',   emoji: '🥫', activo: 'si' },
+    { nombre: 'Panadería', emoji: '🍞', activo: 'si' }
+  ];
+
+  function renderCategorias(cats) {
+    var grid = document.getElementById('catGrid');
+    var activos = cats.filter(function(c) { return (c.activo || '').toLowerCase() === 'si'; });
+    if (!activos.length) return;
+    grid.innerHTML = activos.map(function(c) {
+      return '<div class="cat-card" tabindex="0">' +
+        '<span class="cat-emoji" aria-hidden="true">' + c.emoji + '</span>' +
+        '<span class="cat-name">' + c.nombre + '</span>' +
+      '</div>';
+    }).join('');
+  }
+
+  renderCategorias(CATEGORIAS_FALLBACK);
+
+  if (SHEET_CATEGORIAS_URL) {
+    fetch(SHEET_CATEGORIAS_URL + '&t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.text(); })
+      .then(function(text) { renderCategorias(parseCsv(text)); })
+      .catch(function() {});
+  }
 
   // ---- SMART HEADER (ocultar al bajar, mostrar al subir) ----
   var lastScroll = 0;
